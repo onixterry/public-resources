@@ -1,0 +1,11 @@
+
+gsutil -m cp * gs://<bucket>
+--> copies multiple files at once
+gsutil -o cp largefile.gz gs://<bucket>
+--> breaks large file into chunks  (Do not use on nearline/coldline due to additional charges)
+
+
+To test performance
+gsutil perfdiag gs://<bucket>
+gsutil perfdiag -n 100 -p fan -k 4 -t rthru,wthru gs://<bucket>
+--> 100 files, 4 at a time, recording only read and write data
