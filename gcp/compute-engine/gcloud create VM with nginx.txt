@@ -1,0 +1,11 @@
+gcloud compute instances create server \
+--zone=us-east1-b \
+--machine-type=e2-medium \
+--subnet=cloud-ids-useast1 \
+--no-address \
+--private-network-ip=192.168.10.20 \
+--metadata=startup-script=\#\!\ /bin/bash$'\n'sudo\ apt-get\ update$'\n'sudo\ apt-get\ -qq\ -y\ install\ nginx \
+--tags=server \
+--image=debian-10-buster-v20210609 \
+--image-project=debian-cloud \
+--boot-disk-size=10GB

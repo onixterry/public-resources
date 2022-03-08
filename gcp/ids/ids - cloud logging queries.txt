@@ -1,0 +1,11 @@
+logName:("projects/<PROJECT_ID>/logs/ids.googleapis.com%2Fthreat") AND resource.type:("ids.googleapis.com/Endpoint") 
+
+
+logName:("projects/<PROJECT_ID>/logs/ids.googleapis.com%2Fthreat") AND resource.type:("ids.googleapis.com/Endpoint") 
+jsonPayload.alert_severity="CRITICAL"
+
+
+LOW
+MEDIUM
+HIGH
+CRITICAL
